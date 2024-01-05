@@ -1,0 +1,23 @@
+{
+    "private": true,
+    "name": "resizer",
+    "version": "1.0.0",
+    "description": "",
+    "main": "build/index.js",
+    "scripts": {
+        "start": "tsx watch src/index.ts",
+        "build": "npm run clean && tsc",
+        "clean": "rimraf build"
+    },
+    "author": "",
+    "license": "UNLICENSED",
+    "devDependencies": {
+        "@types/node": "^20.10.4",
+        "tsx": "^3.12.6",
+        "typescript": "^5.0.4"
+    },
+    "dependencies": {
+        "canvas": "^2.11.2",
+        "fs": "^0.0.1-security"
+    }
+}
