@@ -1,0 +1,171 @@
+{
+    "230": {
+        "year": 2023,
+        "students": {
+            "f45d4447-4fa5-4a3b-a6c7-0b734686299f": {
+                "name": "Tarik Mesbahi",
+                "functions": ["PDM", "SUICIDE"],
+                "description": ""
+            },
+            "0fb54638-4f87-4fb4-96d7-9d0168bbd801": {
+                "name": "Bastien Renard",
+                "functions": ["KS"],
+                "description": ""
+            },
+            "fdf2fd23-1263-4811-bc97-c2d6f96ace5c": {
+                "name": "Antoine Lesueur",
+                "functions": ["ROH"],
+                "description": ""
+            },
+            "7e34bc8d-db0e-45f4-a782-7aed45c76b3c": {
+                "name": "Ayman Jbilou",
+                "functions": [],
+                "description": ""
+            },
+            "cc4045df-7b24-4c86-ad6d-d6385a3b0b49": {
+                "name": "Celeste Caron",
+                "functions": [],
+                "description": ""
+            },
+            "400cd30b-2ba9-4ffa-96c8-9b036c6178ac": {
+                "name": "Cyprien Carnoy",
+                "functions": [],
+                "description": ""
+            },
+            "6c5ea80f-96d3-49b7-a2e0-f689f1395d67": {
+                "name": "Felix Wolf",
+                "functions": ["SEKHSB"],
+                "description": ""
+            },
+            "460336fe-5aaf-42b3-af97-6df648f4a703": {
+                "name": "Gaspard Sabot",
+                "functions": []
+            },
+            "beb29741-9fb4-4dcc-a3ef-0a346cb6cda2": {
+                "name": "Gaspard Sevrin-Duhamel",
+                "functions": [],
+                "description": ""
+            },
+            "7f87a6a6-4a2b-41fc-b1bc-dc5fb51224e6": {
+                "name": "Leonard Vanhoove",
+                "functions": [],
+                "description": ""
+            },
+            "7817b683-7bb5-4e5a-9df9-fce5f2c6fcc5": {
+                "name": "Luka Darras",
+                "functions": [],
+                "description": ""
+            },
+            "4031ae88-c203-4493-b771-504d612e8f4b": {
+                "name": "Nathan Laurence",
+                "functions": ["SKHRIBE"],
+                "description": ""
+            },
+            "49f8f4d1-4f1b-416b-9106-fd5629566947": {
+                "name": "Noe Desombre",
+                "functions": [],
+                "description": ""
+            },
+            "9e24d58a-440a-40c3-8313-705edcf178c0": {
+                "name": "Paul-Loup Cordonnier",
+                "functions": [],
+                "description": ""
+            },
+            "77feab67-83e7-4497-9dc0-47d73216d3bd": {
+                "name": "Philemon Chardin",
+                "functions": [],
+                "description": ""
+            },
+            "9c63dfc2-e0c1-4c5c-afc2-5c8e3319d555": {
+                "name": "Tom Dolphen",
+                "functions": ["TANPHY"],
+                "description": ""
+            },
+            "244e5b06-175e-49eb-bf61-c15852a98d99": {
+                "name": "Wassim Aksil",
+                "functions": [],
+                "description": ""
+            },
+            "6a385400-a65e-49f7-879e-23d037378e10": {
+                "name": "Ylan Tahar",
+                "functions": [],
+                "description": ""
+            },
+            "8256ecb3-05f4-42ef-b1e3-be2722e9f095": {
+                "name": "Benoit Delestre",
+                "functions": ["CDO"],
+                "description": ""
+            },
+            "b4737b61-ada3-469f-aaf5-853a4151b3f9": {
+                "name": "Omaima Kafahi",
+                "functions": [],
+                "description": ""
+            },
+            "1b64fa8f-8979-4eab-a669-5c8838d85b37": {
+                "name": "Louise Tison",
+                "functions": [],
+                "description": ""
+            },
+            "77a0d089-923e-4ebe-a710-0d44315601d2": {
+                "name": "Simon Ossart",
+                "functions": [],
+                "description": ""
+            },
+            "90e89a29-fbe6-49dc-bc9d-639353b8d350": {
+                "name": "Antoine Paul",
+                "functions": [],
+                "description": ""
+            },
+            "a3c23f43-d78e-4f24-855b-e19096ced0d4": {
+                "name": "Thomas Ponce",
+                "functions": [],
+                "description": ""
+            },
+            "ed1bba30-2a6e-4a3b-83a2-4acf8361ba08": {
+                "name": "Clement Dieux",
+                "functions": [],
+                "description": ""
+            },
+            "d64cdbb6-b27b-4cf0-b2a0-4ddde7eb2932": {
+                "name": "Max Billeaux Mattelin",
+                "functions": [],
+                "description": ""
+            },
+            "699ce817-46c9-4c0b-8294-d19f07d7a3a6": {
+                "name": "Emma Claus",
+                "functions": [],
+                "description": ""
+            },
+            "1603f005-8f38-4a9d-86d2-595decae3242": {
+                "name": "Antoine Delerue",
+                "functions": [],
+                "description": ""
+            },
+            "fc1d8081-c2cd-4d22-8c59-a7d84dab5f23": {
+                "name": "Clemence Marrilliet",
+                "functions": ["KS"],
+                "description": ""
+            },
+            "4a81f1f1-4d09-4ea9-a4c5-cd49522b2df2": {
+                "name": "Fantine Mairesse",
+                "functions": ["MISS", "VENUS"],
+                "description": ""
+            },
+            "49e724d2-84bb-4672-a8ce-488b7c578547": {
+                "name": "Astrid Pipier",
+                "functions": ["PZ"],
+                "description": ""
+            },
+            "1576e6c6-8ec7-4ecb-a3d8-0a0138363c1d": {
+                "name": "Anne-Charlotte Willems",
+                "functions": ["PDM"],
+                "description": ""
+            },
+            "cb881cd0-acb6-4670-96a5-d4754cba68de": {
+                "name": "Pierre Morot",
+                "functions": [],
+                "description": ""
+            }
+        }
+    }
+}
