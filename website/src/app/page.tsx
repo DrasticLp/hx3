@@ -1,5 +1,5 @@
 "use client";
-import { Hero, LoginPage, PdmSection } from "@/components";
+import { Hero, LoginPage, PdmSection, PzSection } from "@/components";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { useCookies } from "react-cookie";
@@ -25,7 +25,9 @@ export default function Home() {
                 )
             ).json();
 
-            setData({ classrooms: classrooms, entries: entries });
+            const files = await (await fetch("/api/filelist")).json();
+
+            setData({ classrooms: classrooms, entries: entries, files: files });
         };
 
         if (!cookies.token) setCookie("token", "-1");
@@ -34,7 +36,7 @@ export default function Home() {
         setShouldRerender(false);
     }, [cookies, setCookie, setData, shouldRerender, setShouldRerender]);
 
-    if (Object.keys(data).length != 2) return <div></div>;
+    if (Object.keys(data).length != 3) return <div></div>;
 
     return (
         <main className="overflow-hidden">
@@ -42,7 +44,7 @@ export default function Home() {
 
             <Hero />
             <div className="mt-12 padding-x padding-y max-width" id="pdm">
-                <div className="home__text-container">
+                <div id="pdmsection" className="home__text-container">
                     <h1 className="text-4xl font-extrabold">Archives PDM</h1>
 
                     <p>Découvre ce qui se passe dans la classe</p>
@@ -54,6 +56,18 @@ export default function Home() {
                         entries={(data as any).entries}
                         setShouldRerender={setShouldRerender}
                     />
+                </div>
+
+                <div id="pzsection" className="home__text-container">
+                    <h1 className="text-4xl font-extrabold">Archives PZ</h1>
+
+                    <p>Revis les moments forts de la HX3</p>
+                </div>
+
+                <div className="home__filters">
+                    <PzSection
+                        setShouldRerender={setShouldRerender}
+                        files={(data as any).files}></PzSection>
                 </div>
             </div>
         </main>

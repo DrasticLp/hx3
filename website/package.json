@@ -3,28 +3,31 @@
     "version": "0.1.0",
     "private": true,
     "scripts": {
-        "dev": "next dev",
+        "dev": "next dev -p 80",
         "build": "next build",
         "start": "next start",
         "lint": "next lint"
     },
     "dependencies": {
         "@headlessui/react": "^1.7.17",
-        "@heroicons/react": "^2.0.18",
+        "@types/adm-zip": "^0.5.5",
         "@types/crypto-js": "^4.2.1",
+        "adm-zip": "^0.5.10",
+        "chonky-icon-fontawesome": "^2.3.2",
         "crypto-js": "^4.2.0",
         "dotenv": "^16.3.1",
         "evergreen-ui": "^7.1.9",
         "firebase-admin": "^12.0.0",
+        "image-size": "^1.1.1",
         "next": "14.0.3",
-        "node": "^21.2.0",
         "react": "^18",
         "react-cookie": "^6.1.1",
         "react-device-detect": "^2.2.3",
-        "react-dom": "^18"
+        "react-dom": "^18",
+        "react-icons": "^5.0.1",
+        "valid-filename": "^4.0.0"
     },
     "devDependencies": {
-        "@types/node": "^20",
         "@types/react": "^18",
         "@types/react-dom": "^18",
         "autoprefixer": "^10.0.1",

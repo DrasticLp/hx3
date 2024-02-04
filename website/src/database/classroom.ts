@@ -1,4 +1,3 @@
-import { log } from "console";
 import { randomUUID } from "crypto";
 import { FaidherbeFunctions } from ".";
 

@@ -1,18 +1,11 @@
 "use client";
-import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import {
     Button,
     Dialog,
-    Label,
-    Menu,
-    Popover,
-    TextInput,
     TextInputField,
     toaster,
 } from "evergreen-ui";
-import React, { Fragment, useState } from "react";
-import { CustomButton } from ".";
-import { Position } from "evergreen-ui/types";
+import React, { useState } from "react";
 import { useCookies } from "react-cookie";
 import { LoginPageProps } from "@/types";
 

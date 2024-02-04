@@ -4,6 +4,7 @@ import { getFirestore } from "firebase-admin/firestore";
 import fs, { readFileSync, unwatchFile } from "fs";
 import { config } from "dotenv";
 import CryptoJS from "crypto-js";
+import imageSize from "image-size";
 
 config();
 
@@ -19,8 +20,11 @@ export class Database {
 
     classroomData: any;
     entriesData: any;
-    authData: Map<string, { canEditEntries: boolean; password: string }> =
-        new Map();
+    fileListData: any;
+    authData: Map<
+        string,
+        { canEditEntries: boolean; canEditPz: boolean; password: string }
+    > = new Map();
     key = CryptoJS.enc.Base64.parse(
         process.env.PRIVATE_KEY || "0000000000000000000000"
     );
@@ -52,6 +56,11 @@ export class Database {
         return this.entriesData;
     }
 
+    getFileListData() {
+        if (!this.fileListData) this.fetchFileListData();
+        return this.fileListData;
+    }
+
     async fetchClassroomData() {
         let coll = this.getCollection("classrooms");
         let snapshot = await coll?.get();
@@ -81,6 +90,7 @@ export class Database {
         for (let doc of snapshot.docs)
             this.authData.set(doc.id, {
                 canEditEntries: doc.data().canEditEntries,
+                canEditPz: doc.data().canEditPz,
                 password: (
                     await this.encryptPassword(doc.data().password)
                 ).toString(),
@@ -113,6 +123,39 @@ export class Database {
         }
 
         this.entriesData = res;
+    }
+
+    fetchFileListData() {
+        this.fileListData = this.getFolderContents("");
+    }
+
+    getFolderContents(folder: string) {
+        let list = fs.readdirSync("./public/pz/" + folder);
+        let files: any = {};
+
+        for (let f of list) {
+            let stat = fs.statSync("./public/pz/" + folder + "/" + f);
+
+            if (stat.isDirectory()) {
+                if (f == "zips") continue;
+                files[f] = this.getFolderContents(folder + "/" + f);
+
+                for (let s in files[f])
+                    if (!s.includes(".") && s != "hasSubDirs") {
+                        files[f].hasSubDirs = true;
+                        break;
+                    }
+            } else {
+                const dim = imageSize("./public" + "/pz" + folder + "/" + f);
+                files[f] = {
+                    url: "/pz" + folder + "/" + f,
+                    width: dim.orientation == 6 ? dim.height : dim.width,
+                    height: dim.orientation == 6 ? dim.width : dim.height,
+                };
+            }
+        }
+
+        return files;
     }
 
     /**
@@ -148,7 +191,7 @@ export class Database {
     async clearCollection(collection: string) {
         let val = await this.getCollection(collection)?.listDocuments();
 
-        val?.map(val => val.delete());
+        val?.map((val) => val.delete());
     }
 
     encryptPassword(password: string) {
@@ -168,6 +211,18 @@ export class Database {
             user != undefined &&
             token == user.password &&
             user.canEditEntries
+        );
+    }
+
+    async checkEditPzPermission(username: string, token: string) {
+        let authData = await this.getAuthData();
+        let user = authData.get(username);
+
+        return (
+            user != null &&
+            user != undefined &&
+            token == user.password &&
+            user.canEditPz
         );
     }
 

@@ -47,7 +47,7 @@ function EntryList({
                         <Table.TextCell>Avec</Table.TextCell>
                     </Table.Head>
                     <Table.Body key={id + "tablebody"}>
-                        {entries.map(v => {
+                        {entries.map((v) => {
                             let i = v[0];
                             let e: any = v[1];
                             return (
@@ -77,8 +77,8 @@ function EntryList({
                                     <Table.TextCell>{e.date}</Table.TextCell>
                                     <Table.TextCell>
                                         {Object.entries(e.concerned)
-                                            .filter(k => k[1] != id)
-                                            .map(n =>
+                                            .filter((k) => k[1] != id)
+                                            .map((n) =>
                                                 students.has(n[1] as string) ? (
                                                     <div
                                                         key={
@@ -145,13 +145,20 @@ function EntryList({
                             {`Année: ${
                                 2023 +
                                 230 -
-                                parseInt(student?.classroom || "230")
+                                parseInt(
+                                    (() => {
+                                        let s = student?.classroom.split("-");
+                                        return s
+                                            ? s[s?.length - 1] || "230"
+                                            : "230";
+                                    })()
+                                )
                             }`}
                             <br />
                             {`Fonctions:`}
                             <br />
                             {student?.functions.length != 0
-                                ? student?.functions.map(f => (
+                                ? student?.functions.map((f) => (
                                       <div key={f}>
                                           {`- ${f}`}
                                           <br />

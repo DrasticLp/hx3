@@ -21,9 +21,9 @@ function PdmSection({ data, entries, setShouldRerender }: PdmSectionProps) {
         }
 
     const [addEntryOpened, setAddEntryOpened] = useState(false);
-    const [values, setValues] = React.useState([""]);
+    const [values, setValues] = React.useState(["Classe:230"]);
 
-    const tagList = classroomList.map(c => `Classe:${c}`);
+    const tagList = classroomList.map((c) => `Classe:${c}`);
 
     for (let s of studentList.keys())
         tagList.push(`Nom:${studentList.get(s)?.name}`);
@@ -32,7 +32,7 @@ function PdmSection({ data, entries, setShouldRerender }: PdmSectionProps) {
 
     const allValues = React.useMemo(() => tagList, []);
     const autocompleteItems = React.useMemo(
-        () => allValues.filter(i => !values.includes(i)),
+        () => allValues.filter((i) => !values.includes(i)),
         [allValues, values]
     );
 
@@ -43,12 +43,12 @@ function PdmSection({ data, entries, setShouldRerender }: PdmSectionProps) {
 
         if (!student) continue;
 
-        let classTags = values.filter(v => v.startsWith("Classe:"));
+        let classTags = values.filter((v) => v.startsWith("Classe:"));
         let classFilter =
             classTags.length == 0 ||
             values.includes(`Classe:${student?.classroom}`);
 
-        let functionTags = values.filter(v => v.startsWith("Fonction:"));
+        let functionTags = values.filter((v) => v.startsWith("Fonction:"));
         let functionFilter = functionTags.length == 0;
 
         for (let f of student?.functions)
@@ -57,7 +57,7 @@ function PdmSection({ data, entries, setShouldRerender }: PdmSectionProps) {
                 break;
             }
 
-        let nameTags = values.filter(v => v.startsWith("Nom:"));
+        let nameTags = values.filter((v) => v.startsWith("Nom:"));
         let nameFilters =
             nameTags.length == 0 || nameTags.includes(`Nom:${student.name}`);
 
@@ -86,14 +86,13 @@ function PdmSection({ data, entries, setShouldRerender }: PdmSectionProps) {
                 students={studentList}
                 setShouldRerender={setShouldRerender}
             />
-            {
-                <CardList
-                    filteredStudents={filteredStudents}
-                    entries={entries}
-                    students={studentList}
-                    setShouldRerender={setShouldRerender}
-                />
-            }
+
+            <CardList
+                filteredStudents={filteredStudents}
+                entries={entries}
+                students={studentList}
+                setShouldRerender={setShouldRerender}
+            />
         </div>
     );
 }

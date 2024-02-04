@@ -5,7 +5,12 @@ import Image from "next/image";
 import { CustomButton } from ".";
 
 function Hero() {
-    const handleScroll = () => {};
+    const handleScroll = (id: string) => {
+        window.scrollTo({
+            top: (document.getElementById(id)?.offsetTop || 60) - 60,
+            behavior: "smooth",
+        });
+    };
 
     return (
         <div className="hero">
@@ -36,11 +41,18 @@ function Hero() {
                             window.open("https://benlhajlahsen.fr/")
                         }
                     />
-
+                </div>
+                <div className="flex flex-row ">
                     <CustomButton
                         title="PDM"
+                        containerStyles="bg-primary-color text-white rounded-full mt-10 mr-5"
+                        handleClick={() => handleScroll("pdmsection")}
+                    />
+
+                    <CustomButton
+                        title="PZ"
                         containerStyles="bg-primary-color text-white rounded-full mt-10"
-                        handleClick={handleScroll}
+                        handleClick={() => handleScroll("pzsection")}
                     />
                 </div>
             </div>

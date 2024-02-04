@@ -84,3 +84,32 @@ export interface EntryPaneProps {
     close: () => void;
     closeParent: () => void;
 }
+
+export interface PzSectionProps {
+    files: any;
+    setShouldRerender: (shouldRerender: boolean) => void;
+}
+
+export interface ImageSliderProps {
+    files: any;
+    year: string;
+    event: string;
+    cookies: {
+        token?: any;
+        user?: any;
+    };
+    setShouldRerender: (shouldRerender: boolean) => void;
+
+    setEvent: (event: string) => void;
+}
+
+export interface PzUploaderProps {
+    show: boolean;
+    setShown: (shown: boolean) => void;
+    yearList: string[];
+    cookies: {
+        token?: any;
+        user?: any;
+    };
+    setShouldRerender: (shouldRerender: boolean) => void;
+}

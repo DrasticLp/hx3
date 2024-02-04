@@ -23,10 +23,10 @@ function Footer() {
                 </div>
 
                 <div className="footer__links">
-                    {footerLinks.map(link => (
+                    {footerLinks.map((link) => (
                         <div className="footer__link" key={link.title}>
                             <h3 className="font-bold">{link.title}</h3>
-                            {link.links.map(item => (
+                            {link.links.map((item) => (
                                 <Link
                                     className="text-gray-500"
                                     key={item.title}
@@ -41,7 +41,7 @@ function Footer() {
             <div className="flex justify-between items-center flex-wrap border-t border-gray-100 sm:px-16 px-6 py-10 mt-10">
                 <p>@HX3 230 Meilleure année</p>
                 <Link href="/" className="text-gray-500">
-                    Rush Baggio
+                    Rush PSI Merguez
                 </Link>
             </div>
         </footer>

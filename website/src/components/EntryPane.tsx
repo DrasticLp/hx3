@@ -73,11 +73,11 @@ function EntryPane({
     }
 
     const [values, setValues] = React.useState(
-        baseConcerned.map(v => students.get(v)?.name as string)
+        baseConcerned.map((v) => students.get(v)?.name as string)
     );
 
     const autocompleteItems = React.useMemo(
-        () => names.filter(i => !values.includes(i)),
+        () => names.filter((i) => !values.includes(i)),
         [names, values]
     );
 
@@ -89,7 +89,7 @@ function EntryPane({
         if (content == baseContent && baseConcerned == values) return;
 
         let data = {
-            concerned: values.map(v => {
+            concerned: values.map((v) => {
                 return reverse[v];
             }),
             content: content,
@@ -189,6 +189,7 @@ function EntryPane({
                 id="textareaentry"
                 placeholder="Dis-moi tout..."
                 defaultValue={baseContent}
+                height={200}
                 onChange={(e: any) => setContent(e.target.value)}
                 onSubmit={() => {}}></Textarea>
 
@@ -209,7 +210,7 @@ function EntryPane({
             <Switch
                 disabled={!connectedAsPDM}
                 checked={isPrivate}
-                onChange={e => setIsPrivate(e.target.checked)}></Switch>
+                onChange={(e) => setIsPrivate(e.target.checked)}></Switch>
         </Dialog>
     );
 }

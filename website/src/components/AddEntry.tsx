@@ -1,11 +1,11 @@
 "use client";
 import { AddEntryProps } from "@/types";
-import React, { Fragment, useEffect, useState } from "react";
+import React, { useState } from "react";
 import {
     Button,
     Label,
     Textarea,
-    Dialog,
+    Dialog, 
     TagInput,
     toaster,
     Switch,

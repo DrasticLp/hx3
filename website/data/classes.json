@@ -29,7 +29,7 @@
             },
             "400cd30b-2ba9-4ffa-96c8-9b036c6178ac": {
                 "name": "Cyprien Carnoy",
-                "functions": [],
+                "functions": ["Z"],
                 "description": ""
             },
             "6c5ea80f-96d3-49b7-a2e0-f689f1395d67": {
@@ -163,6 +163,51 @@
             },
             "cb881cd0-acb6-4670-96a5-d4754cba68de": {
                 "name": "Pierre Morot",
+                "functions": [],
+                "description": ""
+            },
+            "cd20a5a2-83fd-4f07-8065-b93d72ddc116": {
+                "name": "Simon Damade",
+                "functions": [],
+                "description": ""
+            },
+            "245ef965-91a8-4587-8444-1e0161fa52ea": {
+                "name": "Lara Kouba Koutalana",
+                "functions": [],
+                "description": ""
+            },
+            "d3211e46-d85b-4966-bb52-2e5272ac6327": {
+                "name": "Lyne Tahan",
+                "functions": [],
+                "description": ""
+            },
+            "bb95df9a-a7b3-48f2-b864-21c662621d9d": {
+                "name": "Clara Defretin",
+                "functions": [],
+                "description": "Partie vers d'autres cieux (toujours là pour l'appel)"
+            },
+            "9c40b303-12e1-408a-b10f-a04f7527ee6d": {
+                "name": "Emeline Francois",
+                "functions": [],
+                "description": ""
+            },
+            "e4dde0b4-b885-453d-8dda-286b1e3d8467": {
+                "name": "Solene Boizart",
+                "functions": ["Z"],
+                "description": ""
+            },
+            "08fc054b-780f-40f3-a999-e4ee7d62d9d8": {
+                "name": "Asma Mohamed Ahmed",
+                "functions": [],
+                "description": ""
+            },
+            "395fcf07-8b06-4080-bd9d-5c8ceacc273b": {
+                "name": "May-Line Zinout",
+                "functions": [],
+                "description": ""
+            },
+            "60570176-ef74-43ff-ba9c-b8945e64599f": {
+                "name": "Alice Maurice",
                 "functions": [],
                 "description": ""
             }
